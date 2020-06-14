@@ -1,0 +1,112 @@
+{
+  
+  "1": {
+    "title": "C1.From Monolith to Microservices",
+    "content": "Content will be added .",
+    "url": "http://localhost:4000/docs/chapter1/",
+    "relUrl": "/docs/chapter1/"
+  }
+  ,"2": {
+    "title": "C10. Services",
+    "content": "Content will be added .",
+    "url": "http://localhost:4000/docs/chapter10/",
+    "relUrl": "/docs/chapter10/"
+  }
+  ,"3": {
+    "title": "C11. Deploying a Stand-Alone Application",
+    "content": "Content will be added .",
+    "url": "http://localhost:4000/docs/chapter11/",
+    "relUrl": "/docs/chapter11/"
+  }
+  ,"4": {
+    "title": "C12. Kubernetes Volume Management",
+    "content": "Content will be added .",
+    "url": "http://localhost:4000/docs/chapter12/",
+    "relUrl": "/docs/chapter12/"
+  }
+  ,"5": {
+    "title": "C13. ConfigMaps and Secrets",
+    "content": "Content will be added .",
+    "url": "http://localhost:4000/docs/chapter13/",
+    "relUrl": "/docs/chapter13/"
+  }
+  ,"6": {
+    "title": "C14. Ingress",
+    "content": "Content will be added .",
+    "url": "http://localhost:4000/docs/chapter14/",
+    "relUrl": "/docs/chapter14/"
+  }
+  ,"7": {
+    "title": "C1.From Monolith to Microservices",
+    "content": "Content will be added .",
+    "url": "http://localhost:4000/docs/chapter15/",
+    "relUrl": "/docs/chapter15/"
+  }
+  ,"8": {
+    "title": "C16. Kubernetes Community",
+    "content": "Content will be added .",
+    "url": "http://localhost:4000/docs/chapter16/",
+    "relUrl": "/docs/chapter16/"
+  }
+  ,"9": {
+    "title": "C2. Container Orchestration",
+    "content": "Content will be added .",
+    "url": "http://localhost:4000/docs/chapter2/",
+    "relUrl": "/docs/chapter2/"
+  }
+  ,"10": {
+    "title": "C3. Kubernetes",
+    "content": "Content will be added .",
+    "url": "http://localhost:4000/docs/chapter3/",
+    "relUrl": "/docs/chapter3/"
+  }
+  ,"11": {
+    "title": "C4. Kubernetes Architecture",
+    "content": "Content will be added ! .",
+    "url": "http://localhost:4000/docs/chapter4/",
+    "relUrl": "/docs/chapter4/"
+  }
+  ,"12": {
+    "title": "C5. Installing Kubernetes",
+    "content": "Content will be added .",
+    "url": "http://localhost:4000/docs/chapter5/",
+    "relUrl": "/docs/chapter5/"
+  }
+  ,"13": {
+    "title": "C6. Minikube",
+    "content": "Content will be added .",
+    "url": "http://localhost:4000/docs/chapter6/",
+    "relUrl": "/docs/chapter6/"
+  }
+  ,"14": {
+    "title": "C7. Accessing Minikube",
+    "content": "Content will be added .",
+    "url": "http://localhost:4000/docs/chapter7/",
+    "relUrl": "/docs/chapter7/"
+  }
+  ,"15": {
+    "title": "C8. Kubernetes Building Blocks",
+    "content": "Content will be added .",
+    "url": "http://localhost:4000/docs/chapter8/",
+    "relUrl": "/docs/chapter8/"
+  }
+  ,"16": {
+    "title": "C9. Authentication, Authorization",
+    "content": "Content will be added .",
+    "url": "http://localhost:4000/docs/chapter9/",
+    "relUrl": "/docs/chapter9/"
+  }
+  ,"17": {
+    "title": "Final Exam",
+    "content": "Content will be added .",
+    "url": "http://localhost:4000/docs/final/",
+    "relUrl": "/docs/final/"
+  }
+  ,"18": {
+    "title": "Introduction to Kubernetes",
+    "content": "Introduction to Kubernetes . Important figures, notes and examples may be included in this website in order to do not lose the progress. . Go To Course . Go To Course . The course is conducted over edX for free if you do not want to have certificate for the course . . Link to course: https://www.edx.org/course/introduction-to-kubernetes .",
+    "url": "http://localhost:4000/",
+    "relUrl": "/"
+  }
+  
+}
