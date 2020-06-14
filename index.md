@@ -3,7 +3,7 @@ layout: default
 title: Introduction to Kubernetes
 nav_order: 1
 description: "This website holds all notes,figures and examples which are taken from Introduction to Kubernetes course conducted by EdX"
-permalink: /
+
 ---
 
 # Introduction to Kubernetes
@@ -13,7 +13,7 @@ Important figures, notes and examples may be included in this website in order t
 
 {: .fs-6 .fw-300 }
 
-[Go To Course](#go-to-course){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[Go To Course](https://www.edx.org/course/introduction-to-kubernetes){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 ---
 
 ## Go To Course 
