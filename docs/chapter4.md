@@ -91,7 +91,7 @@ etcd's CLI management tool provides backup, snapshot, and restore capabilities w
 
 etcd is based on the [Raft Consensus Algorithm](https://web.stanford.edu/~ouster/cgi-bin/papers/raft-atc14) which allows a collection of machines to work as a coherent group that can survive the failures of some of its members. At any given time, one of the nodes in the group will be the master, and the rest of them will be the followers. Any node can be treated as a master.
 
-![Master and Followers](/assets/images/intro-kubernetes/master-followers.png)
+![Master and Followers](../../assets/images/intro-kubernetes/master-followers.png)
 
 
 **etcd** is written in the **Go programming language**. In Kubernetes, besides storing the cluster state, etcd is also used to store configuration details such as subnets, ConfigMaps, Secrets, etc.
@@ -102,7 +102,7 @@ Could be useful to check out [**POD**](https://kubernetes.io/docs/concepts/workl
 
 A worker node provides a running environment for client applications. Though containerized microservices, these applications are encapsulated in Pods, controlled by the cluster control plane agents running on the master node. Pods are scheduled on worker nodes, where they find required compute, memory and storage resources to run, and networking to talk to each other and the outside world. A Pod is the smallest scheduling unit in Kubernetes. It is a logical collection of one or more containers scheduled together
 
-![Worker Node](/assets/images/intro-kubernetes/worker_node.png)
+![Worker Node](../../assets/images/intro-kubernetes/worker_node.png)
 
 Also, to access the applications from the external world, we connect to worker nodes and not to the master node
 
@@ -133,7 +133,7 @@ The **kubelet** is an agent running on each node and communicates with the contr
 
 The kubelet connects to the container runtime using [Container Runtime Interface](https://github.com/kubernetes/community/blob/master/contributors/devel/sig-node/container-runtime-interface.md) (CRI). CRI consists of protocol buffers, gRPC API, and libraries.
 
-![Container Runtime Interface ](/assets/images/intro-kubernetes/cri.png)
+![Container Runtime Interface ](../../assets/images/intro-kubernetes/cri.png)
 
 As shown above, the kubelet acting as grpc client connects to the CRI shim acting as grpc server to perform container and image operations. CRI implements two services: **ImageService** and **RuntimeService**. The **ImageService** is responsible for all the image-related operations, while the **RuntimeService** is responsible for all the Pod and container-related operations.
 
@@ -148,19 +148,19 @@ Below you will find some examples of CRI shims:
 
     With dockershim, containers are created using Docker installed on the worker nodes. Internally, Docker uses containerd to create and manage containers.
 
-    ![dockershim](/assets/images/intro-kubernetes/dockershim.png)
+    ![dockershim](../../assets/images/intro-kubernetes/dockershim.png)
 
 - **cri-containerd**
 
     With cri-containerd, we can directly use Docker's smaller offspring containerd to create and manage containers.
 
-    ![cri-containerd](/assets/images/intro-kubernetes/cri-containerd.png)
+    ![cri-containerd](../../assets/images/intro-kubernetes/cri-containerd.png)
 
 - **CRI-O**
 
     CRI-O enables using any Open Container Initiative (OCI) compatible runtimes with Kubernetes. At the time this course was created, CRI-O supported runC and Clear Containers as container runtimes. However, in principle, any OCI-compliant runtime can be plugged-in.
 
-    ![CRI-O](/assets/images/intro-kubernetes/crio.png)
+    ![CRI-O](../../assets/images/intro-kubernetes/crio.png)
 
 ### Worker Node Components: kube-proxy
 
@@ -208,7 +208,7 @@ However, containers are integrated with the overall Kubernetes networking model 
 
 CNI is a set of a specification and libraries which allow plugins to configure the networking for containers. While there are a few [core plugins](https://github.com/containernetworking/plugins#plugins), most CNI plugins are 3rd-party Software Defined Networking (SDN) solutions implementing the Kubernetes networking model. In addition to addressing the fundamental requirement of the networking model, some networking solutions offer support for Network Policies. [Flannel](https://github.com/coreos/flannel/), [Weave](https://www.weave.works/oss/net/), [Calico](https://www.projectcalico.org/) are only a few of the SDN solutions available for Kubernetes clusters.
 
-![Container Network Interface CNI](/assets/images/intro-kubernetes/cni.png)
+![Container Network Interface CNI](../../assets/images/intro-kubernetes/cni.png)
 
 
 The container runtime offloads the IP assignment to CNI, which connects to the underlying configured plugin, such as Bridge or MACvlan, to get the IP address. Once the IP address is given by the respective plugin, CNI forwards it back to the requested container runtime.
