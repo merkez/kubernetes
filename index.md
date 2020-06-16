@@ -22,3 +22,4 @@ The course is conducted over edX for free if you do not want to have certificate
 
 Link to course: [https://www.edx.org/course/introduction-to-kubernetes](https://www.edx.org/course/introduction-to-kubernetes) 
 
+Course handouts can be downloaded [here](https://prod-edxapp.edx-cdn.org/assets/courseware/v1/d41e7f113692772badd9322b59c82062/asset-v1:LinuxFoundationX+LFS158x+2T2019+type@asset+block/LFS158x_Course_Syllabus.pdf)
