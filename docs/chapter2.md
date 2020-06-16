@@ -3,6 +3,9 @@ layout: default
 title: C2. Container Orchestration
 nav_order: 2
 ---
+
+__Notice: With respect to licence ([https://creativecommons.org/licenses/by-nc-nd/4.0/](https://creativecommons.org/licenses/by-nc-nd/4.0/)) on this course, I am distributing and sharing important points and some information which  are taken from [https://www.edx.org/course/introduction-to-kubernetes](https://www.edx.org/course/introduction-to-kubernetes) course__
+
 - [Container Orchestration](#container-orchestration)
   - [What Are Containers?](#what-are-containers)
   - [What Is Container Orchestration?](#what-is-container-orchestration)
@@ -11,8 +14,6 @@ nav_order: 2
   - [Where to Deploy Container Orchestrators?](#where-to-deploy-container-orchestrators)
 
 # Container Orchestration
-
-__Notice: With respect to licence ([https://creativecommons.org/licenses/by-nc-nd/4.0/](https://creativecommons.org/licenses/by-nc-nd/4.0/)) on this course, I am distributing and sharing important points and some information which  are taken from [https://www.edx.org/course/introduction-to-kubernetes](https://www.edx.org/course/introduction-to-kubernetes) course__
 
 With container images, we confine the application code, its runtime, and all of its dependencies in a pre-defined format. And, with container runtimes like __runC__, __containerd__, or __rkt__ we can use those pre-packaged images, to create one or more containers. All of these runtimes are good at running containers on a single host. But, in practice, we would like to have a fault-tolerant and scalable solution, which can be achieved by creating a single controller/management unit, after connecting multiple nodes together. This __controller/management unit__ is generally referred to as a __container orchestrator__. 
 
