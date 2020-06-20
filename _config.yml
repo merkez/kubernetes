@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Kubernetes Notes
-description: Includes Introduction to Kubernetes Notes
+description: Notes Hub
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://mrturkmen.com" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -35,8 +35,8 @@ heading_anchors: true
 
 # Aux links for the upper right navigation
 aux_links:
-  "Introduction to Kubernetes":
-    - "https://www.edx.org/course/introduction-to-kubernetes"
+  "Notes Hub":
+    - "https://mrturkmen.com/kubernetes"
 
 
 # Color scheme currently only supports "dark" or nil (default)
