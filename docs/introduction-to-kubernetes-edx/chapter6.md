@@ -3,6 +3,7 @@ layout: default
 title: C6. Minikube 
 published: true
 nav_order: 5
+parent: Introduction To Kubernetes- edX
 ---
 
 

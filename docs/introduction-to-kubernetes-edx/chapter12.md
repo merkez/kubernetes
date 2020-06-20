@@ -1,8 +1,9 @@
 ---
 layout: default
-title: C9. Authentication, Authorization
+title: C12. Kubernetes Volume Management
 published: false
-nav_order: 8
+nav_order: 11
+parent: Introduction To Kubernetes- edX
 ---
 
 ⚠️ __Notice: With respect to licence ([https://creativecommons.org/licenses/by-nc-nd/4.0/](https://creativecommons.org/licenses/by-nc-nd/4.0/)) on this course, I am distributing and sharing important points and some information which  are taken from [https://www.edx.org/course/introduction-to-kubernetes](https://www.edx.org/course/introduction-to-kubernetes) course__

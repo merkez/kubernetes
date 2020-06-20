@@ -2,6 +2,7 @@
 layout: default
 title: C2. Container Orchestration
 nav_order: 2
+parent: Introduction To Kubernetes- edX
 ---
 
 ⚠️ __Notice: With respect to licence ([https://creativecommons.org/licenses/by-nc-nd/4.0/](https://creativecommons.org/licenses/by-nc-nd/4.0/)) on this course, I am distributing and sharing important points and some information which  are taken from [https://www.edx.org/course/introduction-to-kubernetes](https://www.edx.org/course/introduction-to-kubernetes) course__
@@ -25,7 +26,7 @@ In this chapter, we will explore why we should use container orchestrators, diff
 
 __Containers__ are application-centric methods to deliver high-performing, scalable applications on any infrastructure of your choice. Containers are best suited to deliver microservices by providing portable, isolated virtual environments for applications to run without interference from other running applications.
 
-![Containers](../assets/images/intro-kubernetes/container.png)
+![Containers](/assets/images/intro-kubernetes/container.png)
 
 __Microservices__ are lightweight applications written in various modern programming languages, with specific dependencies, libraries and environmental requirements. To ensure that an application has everything it needs to run successfully it is packaged together with its dependencies.
 

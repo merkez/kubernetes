@@ -1,8 +1,9 @@
 ---
 layout: default
-title: C11. Deploying a Stand-Alone Application
+title: C14. Ingress 
 published: false
-nav_order: 10
+nav_order: 13
+parent: Introduction To Kubernetes- edX
 ---
 
 ⚠️ __Notice: With respect to licence ([https://creativecommons.org/licenses/by-nc-nd/4.0/](https://creativecommons.org/licenses/by-nc-nd/4.0/)) on this course, I am distributing and sharing important points and some information which  are taken from [https://www.edx.org/course/introduction-to-kubernetes](https://www.edx.org/course/introduction-to-kubernetes) course__
