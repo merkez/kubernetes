@@ -8,9 +8,19 @@ parent: Introduction To Kubernetes- edX
 
 ⚠️ __Notice: With respect to licence ([https://creativecommons.org/licenses/by-nc-nd/4.0/](https://creativecommons.org/licenses/by-nc-nd/4.0/)) on this course, I am distributing and sharing important points and some information which  are taken from [https://www.edx.org/course/introduction-to-kubernetes](https://www.edx.org/course/introduction-to-kubernetes) course__
 
+- [Introduction](#introduction)
+- [Connection Users to Pods](#connection-users-to-pods)
+- [Services](#services)
+  - [Service Object Example](#service-object-example)
+- [kube-proxy](#kube-proxy)
+- [Service Discovery](#service-discovery)
+- [ServiceType](#servicetype)
+  - [ServiceType: ClusterIP and NodePort](#servicetype-clusterip-and-nodeport)
+  - [ServiceType: LoadBalancer](#servicetype-loadbalancer)
+  - [ServiceType: ExternalIP](#servicetype-externalip)
+  - [ServiceType: ExternalName](#servicetype-externalname)
+
 # Introduction 
-
-
 
 Although the microservices driven architecture aims to decouple the components of an application, microservices still need agents to logically tie or group them together and to load balance traffic to the ones that are part of such a logical set.
 
