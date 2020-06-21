@@ -395,7 +395,7 @@ While containerized applications are scheduled to run in pods on nodes across ou
  Implementing **Liveness** and **Readiness Probes** allows the **kubelet** to control the health of the application running inside a Pod's container and force a container restart of an unresponsive application.
  When defining both **Readiness** and **Liveness Probes**, it is recommended to allow enough time for the Readiness Probe to possibly fail a few times before a pass, and only then check the Liveness Probe. If **Readiness** and **Liveness Probes** overlap there may be a risk that the container never reaches ready state. 
 
- ## Liveness
+## Liveness
 
  If a container in the Pod is running, but the application running inside this container is not responding to our requests, then that container is of no use to us. This kind of situation can occur, for example, due to application deadlock or memory pressure. In such a case, it is recommended to restart the container to make the application available.
 
