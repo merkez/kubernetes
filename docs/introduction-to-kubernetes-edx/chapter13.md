@@ -1,7 +1,7 @@
 ---
 layout: default
 title: C13. ConfigMaps and Secrets  
-published: false
+published: true
 nav_order: 12
 parent: Introduction To Kubernetes- edX
 ---
@@ -62,7 +62,7 @@ With the `-o yaml` option, we are requesting the `kubectl` command to spit the o
 
 First, we need to create a configuration file with the following content:
 
-```bash 
+```yaml 
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -106,7 +106,7 @@ Inside a Container, we can retrieve the key-value data of an entire ConfigMap or
 
 In the following example all the **myapp-full-container** Container's environment variables receive the values of the **full-config-map** ConfigMap keys:
 
-```bash 
+```yaml 
 ...
   containers:
   - name: myapp-full-container
@@ -144,7 +144,7 @@ With the above, we will get the **SPECIFIC_ENV_VAR1** environment variable set t
 
 We can mount a `vol-config-map` ConfigMap as a Volume inside a Pod. For each key in the ConfigMap, a file gets created in the mount path (where the file is named with the key name) and the content of that file becomes the respective key's value:
 
-```bash 
+```yaml 
 ...
   containers:
   - name: myapp-vol-container
@@ -213,7 +213,7 @@ bXlzcWxwYXNzd29yZAo=
 ```
 and then use it in the configuration file:
 
-```bash 
+```yaml 
 apiVersion: v1
 kind: Secret
 metadata:
@@ -234,7 +234,7 @@ Therefore, make sure you do not commit a Secret's configuration file in the sour
 
 With **stringData** maps, there is no need to encode the value of each sensitive information field. The value of the sensitive field will be encoded when the **my-password** Secret is created: 
 
-```bash 
+```yaml 
 apiVersion: v1
 kind: Secret
 metadata:
@@ -296,7 +296,7 @@ Secrets are consumed by Containers in Pods as mounted data volumes, or as enviro
 
 Below we reference only the `password` key of the `my-password` Secret and assign its value to the `WORDPRESS_DB_PASSWORD ` environment variable:
 
-```bash 
+```yaml 
 ....
 spec:
   containers:
@@ -315,7 +315,7 @@ spec:
 
 We can also mount a Secret as a Volume inside a Pod. The following example creates a file for each my-password Secret key (where the files are named after the names of the keys), the files containing the values of the Secret:
 
-```bash 
+```yaml 
 ....
 spec:
   containers:

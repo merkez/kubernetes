@@ -248,7 +248,7 @@ No resources found.
 
 Let's create the webserver.yaml file with the following content:
 
-```bash 
+```yaml 
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -300,7 +300,7 @@ We explored different ServiceTypes. With ServiceTypes we can define the access m
 ## Create a webserver-svc.yaml file with the following content:
 
 
-```bash 
+```yaml 
 apiVersion: v1
 kind: Service
 metadata:
@@ -411,7 +411,7 @@ We will discuss these three approaches in the next few sections.
 
 In the following example, we are checking the existence of a file `/tmp/healthy`:
 
-```bash 
+```yaml 
 apiVersion: v1
 kind: Pod
 metadata:
@@ -448,7 +448,7 @@ The existence of the `/tmp/healthy` file is configured to be checked every 5 sec
 
 In the following example, the kubelet sends the `HTTP GET` request to the `/healthz` endpoint of the application, on port 8080. If that returns a failure, then the kubelet will restart the affected container; otherwise, it would consider the application to be alive.
 
-```bash 
+```yaml 
 livenessProbe:
       httpGet:
         path: /healthz
@@ -464,7 +464,7 @@ livenessProbe:
 
 With TCP Liveness Probe, the kubelet attempts to open the TCP Socket to the container which is running the application. If it succeeds, the application is considered healthy, otherwise the kubelet would mark it as unhealthy and restart the affected container.
 
-```bash 
+```yaml 
 livenessProbe:
       tcpSocket:
         port: 8080
@@ -480,7 +480,7 @@ Sometimes, applications have to meet certain conditions before they can serve tr
 
 A Pod with containers that do not report ready status will not receive traffic from Kubernetes Services.
 
-```bash 
+```yaml 
 readinessProbe:
   exec:
     command:
