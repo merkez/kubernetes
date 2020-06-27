@@ -14,6 +14,10 @@ This place is like a link hub which consists of Kubernetes related resources in 
 [k8s training](https://kubernetes.io/training/){: .btn .btn-green .fs-5 .mb-4 .mb-md-0 .mr-2 }
 
 
+# Tutorials 
+
+- [Official Kubernetes Tutorials](https://kubernetes.io/docs/tutorials/)
+
 
 # Blogs & Documentation 
 
