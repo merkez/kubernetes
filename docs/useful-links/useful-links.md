@@ -33,6 +33,9 @@ This place is like a link hub which consists of Kubernetes related resources in 
 - [Kubernetes in 5 mins by VMware](https://youtu.be/PH-2FfFD2PU)
 
 
+# Books
 
-
-
+- [Cloud Native](https://learning.oreilly.com/library/view/cloud-native/9781492053811/)
+- [Cloud Native DevOps With Kubernetes](https://www.nginx.com/resources/library/cloud-native-devops-with-kubernetes/)
+- [Kubernetes Patterns](https://www.redhat.com/cms/managed-files/cm-oreilly-kubernetes-patterns-ebook-f19824-201910-en.pdf)
+- 
