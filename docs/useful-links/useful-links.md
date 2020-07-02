@@ -17,7 +17,7 @@ This place is like a link hub which consists of Kubernetes related resources in 
 # Tutorials 
 
 - [Official Kubernetes Tutorials](https://kubernetes.io/docs/tutorials/)
-
+- [Best Practices](https://kubernetes.io/docs/setup/best-practices/)
 
 # Blogs & Documentation 
 
