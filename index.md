@@ -46,3 +46,4 @@ This section contains list of courses which is free to distribute its content.
 - [Cloud Native](https://learning.oreilly.com/library/view/cloud-native/9781492053811/)
 - [Cloud Native DevOps With Kubernetes](https://www.nginx.com/resources/library/cloud-native-devops-with-kubernetes/)
 - [Kubernetes Patterns](https://www.redhat.com/cms/managed-files/cm-oreilly-kubernetes-patterns-ebook-f19824-201910-en.pdf)
+- [gRPC Up and Running](https://learning.oreilly.com/library/view/grpc-up-and/9781492058328/)
