@@ -1,0 +1,21 @@
+# https://github.com/paulbouwer/hello-kubernetes 
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: hello-kubernetes-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+  - host: service2.example.com
+    http:
+      paths:
+      - backend:
+          serviceName: hello-kubernetes-first
+          servicePort: 80
+  - host: service1.example.com
+    http:
+      paths:
+      - backend:
+          serviceName: hello-kubernetes-second
+          servicePort: 80
