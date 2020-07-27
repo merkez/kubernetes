@@ -100,7 +100,7 @@ master:
   # When enabling LDAP or another non-Jenkins identity source, the built-in admin account will no longer exist.
   # If you disable the non-Jenkins identity store and instead use the Jenkins internal one,
   # you should revert master.adminUser to your preferred admin user:
-  adminUser: "jenkins-admin"
+  adminUser: "admin"
   # adminPassword: <defaults to random>
   admin:
     existingSecret: ""
@@ -132,15 +132,15 @@ master:
   #     value: "http://192.168.64.1:3128"
   # Set min/max heap here if needed with:
   # javaOpts: "-Xms512m -Xmx512m"
-  # jenkinsOpts: ""
-  # jenkinsUrl: ""
+  jenkinsOpts: "--prefix=/jenkins"
+  jenkinsUrl: "jenkins.example.com"
   # If you set this prefix and use ingress controller then you might want to set the ingress path below
   # jenkinsUriPrefix: "/jenkins"
   # Enable pod security context (must be `true` if runAsUser or fsGroup are set)
   usePodSecurityContext: true
   # Set runAsUser to 1000 to let Jenkins run as non-root user 'jenkins' which exists in 'jenkins/jenkins' docker image.
   # When setting runAsUser to a different value than 0 also set fsGroup to the same value:
-  runAsUser: 1000
+  runAsUser: 0
   fsGroup: 1000
   servicePort: 8080
   targetPort: 8080
@@ -283,15 +283,19 @@ master:
     authorizationStrategy: |-
       loggedInUsersCanDoAnything:
         allowAnonymousRead: false
-    # welcome-message: |
-    #   jenkins:
-    #     systemMessage: Welcome to our CI\CD server.  This Jenkins is configured and managed 'as code'.
+    welcome-message: |
+      jenkins:
+        systemMessage: Welcome to our CI\CD server.  This Jenkins is configured and managed 'as code'.
   # Optionally specify additional init-containers
   customInitContainers: []
-  # - name: custom-init
-  #   image: "alpine:3.7"
-  #   imagePullPolicy: Always
-  #   command: [ "uname", "-a" ]
+  # - name: fix-data-volume-permissions
+  #   image: "busybox"
+  #   imagePullPolicy: IfNotPresent
+  #   command: ['sh', '-c', 'chmod -R g+rwX /var/jenkins_home']
+  #   volumeMounts:
+  #   - name: jenkins-home
+  #     mountPath: /var/jenkins_home
+    
 
   sidecars:
     configAutoReload:
@@ -384,16 +388,16 @@ master:
     #       {{ template "jenkins.fullname" . }}
     #     # Don't use string here, use only integer value!
     #     servicePort: 8080
-    # For Kubernetes v1.14+, use 'networking.k8s.io/v1beta1'
+    # # For Kubernetes v1.14+, use 'networking.k8s.io/v1beta1'
     apiVersion: "extensions/v1beta1"
     labels: {}
-    annotations: {}
-    # kubernetes.io/ingress.class: nginx
-    # kubernetes.io/tls-acme: "true"
+    annotations: 
+    kubernetes.io/ingress.class: nginx
+    kubernetes.io/tls-acme: "true"
     # Set this path to jenkinsUriPrefix above or use annotations to rewrite path
-    # path: "/jenkins"
+    path: "/jenkins"
     # configures the hostname e.g. jenkins.example.com
-    hostName:
+    hostName: jenkins.example.com
     tls:
     # - secretName: jenkins.cluster.local
     #   hosts:
@@ -599,12 +603,12 @@ persistence:
   ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
   ##   GKE, AWS & OpenStack)
   ##
-  storageClass:
+  storageClass: jenkins-pv
   annotations: {}
   accessMode: "ReadWriteOnce"
-  size: "8Gi"
+  size: "10Gi"
   volumes:
-  #  - name: nothing
+   - name: storage-place
   #    emptyDir: {}
   mounts:
   #  - mountPath: /var/nothing
