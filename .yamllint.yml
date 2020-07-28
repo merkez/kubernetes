@@ -8,3 +8,9 @@ rules:
 
   # don't bother me with this rule
   indentation: disable
+  empty-lines: 
+    max: 20
+
+  trailing-spaces: disable
+  
+  new-line-at-end-of-file: disable
