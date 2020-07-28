@@ -6,11 +6,8 @@ rules:
     max: 200
     level: warning
 
-  # don't bother me with this rule
+  # don't bother me with these rules
   indentation: disable
-  empty-lines: 
-    max: 20
-
+  empty-lines:  disable
   trailing-spaces: disable
-  
   new-line-at-end-of-file: disable
