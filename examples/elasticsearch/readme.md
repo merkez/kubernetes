@@ -5,3 +5,4 @@ Currently, there is no proper solution for it, however in worst case, ingress co
 ingress controller which is available in following list: [https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/)
 
 
+For detailed information about rules, examples and more about ELK stack deployment to Kubernetes cluster, this repo [https://github.com/pires/kubernetes-elasticsearch-cluster](https://github.com/pires/kubernetes-elasticsearch-cluster) might help in someway, although it is archieved. 
