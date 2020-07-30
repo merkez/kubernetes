@@ -1,0 +1,34 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: elasticsearch
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/app-root: "/"
+    # "413 Request Entity Too Large" uploading plugins, increase client_max_body_size
+    nginx.ingress.kubernetes.io/proxy-body-size: 50m
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "3600s"
+    nginx.ingress.kubernetes.io/proxy-request-buffering: "off"
+
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "180s"
+    nginx.org/proxy-connect-timeout: "3m"
+    # "413 Request Entity Too Large" uploading plugins, increase client_max_body_size
+    ingress.kubernetes.io/proxy-body-size: 100m
+    ingress.kubernetes.io/proxy-request-buffering: "off"
+spec:
+  # To enable SSL offloading at ingress level, uncomment the following 5 lines
+  #tls:
+  #- hosts:
+  #  - elasticsearch.cje.example.com
+  #  # Name of the secret containing the certificate to be used
+  #  secretName: cje-example-com-tls
+  rules:
+  - host: elastic.example.com
+    http:
+      paths:
+      - path: /elasticsearch
+        backend:
+          serviceName: elasticsearch
+          servicePort: 9200
+    

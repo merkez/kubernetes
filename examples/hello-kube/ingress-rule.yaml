@@ -8,13 +8,13 @@ metadata:
     kubernetes.io/ingress.class: nginx
 spec:
   rules:
-  - host: service2.example.com
+  - host: cli.mrturkmen.com
     http:
       paths:
       - backend:
           serviceName: hello-kubernetes-first
           servicePort: 80
-  - host: service1.example.com
+  - host: kube.mrturkmen.com
     http:
       paths:
       - backend:
